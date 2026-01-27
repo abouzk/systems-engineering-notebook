@@ -7,9 +7,9 @@ This repository serves as a living documentation of my technical development, ex
 
 ## Learning Logs
 
-### 📂 Industrial Robotics
+### 📂 [Industrial Robotics](abb_learning_log.md)
 Documentation of standard industrial platforms and safety standards.
-* **[ABB IRC5 External Control & ISO 10218 Safety](abb_learning_log.md)**
+* **ABB IRC5 External Control & ISO 10218 Safety**
   * *Status:* Complete
   * *Summary:* Analysis of RWS communication, latching hardware states, and Python-to-RAPID bridge architecture.
 
