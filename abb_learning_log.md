@@ -20,6 +20,7 @@ Initially confused why we couldn't just plan relative to the robot base.
 ### 3. Controller Configuration (PC Interface)
 Python script initially failed to connect. Found that the standard virtual controller doesn't expose the RWS ports needed for external control.  
 * **Fix:** Rebuilt the system in RobotStudio with option **616-1 PC Interface** enabled. This opened the socket for the Python driver.
+* 
 
 ## Debugging
 ### Network Configuration (Sim vs. Real)
@@ -40,3 +41,17 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 config_path = os.path.join(script_dir, '..', 'config', 'config.yml')
 with open(config_path, 'r') as file:
 ```
+## Safety & ISO 10218 Compliance
+
+### Hardware vs. Software Hierarchy
+* **Observation:** Attempted to write a Python `try/except` block to auto-recover the robot after an E-Stop trigger.
+* **Failure:** The robot controller rejected all commands.
+* **Key Learning:** Safety functions are hierarchically superior to software control. The IRC5 controller enters a **latching hardware state** (Category 0 Stop) that physically disconnects motor power. No software command can override this.
+
+### Recovery Sequence (Deadman Logic)
+* **Standard:** ISO 10218-1 requires specific enabling device logic for manual mode.
+* **Workflow:** To resume Python control after a violation, a human must physically interact with the cell:
+    1.  **Reset:** Twist to release the E-Stop button.
+    2.  **Acknowledge:** Clear the error on the FlexPendant UI.
+    3.  **Enable:** Press the "Motor On" (White Button) hardware switch.
+    4.  **Engage:** Lightly press the Deadman switch to the center position (Position 2).
