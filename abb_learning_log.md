@@ -20,7 +20,11 @@ Initially confused why we couldn't just plan relative to the robot base.
 ### 3. Controller Configuration (PC Interface)
 Python script initially failed to connect. Found that the standard virtual controller doesn't expose the RWS ports needed for external control.  
 * **Fix:** Rebuilt the system in RobotStudio with option **616-1 PC Interface** enabled. This opened the socket for the Python driver.
-* 
+
+### 4. Data Verification
+* **Objective:** Ensure the robot actually reached the commanded targets within the `fine` zone tolerance.
+* **Method:** Plotted the feedback signal (`joint_states`) returned by the RWS client.
+* **Result:** Confirmed smooth interpolation between waypoints with no unexpected stops or jerky motion (discontinuities in velocity).
 
 ## Debugging
 ### Network Configuration (Sim vs. Real)
