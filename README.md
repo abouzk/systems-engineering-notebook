@@ -11,7 +11,7 @@ High-fidelity physics simulation for Sim-to-Real transfer.
 * *Status:* In Progress
 * *Focus:* USD asset pipelines and domain randomization for RL agents.
 
-### 📂 [Robot Operating System](https://github.com/abouzk/RPI-Robot-Programming.git) (ROS 2)
+### 📂 [Robot Operating System](https://github.com/abouzk/ros2-fundamentals.git) (ROS 2)
 Middleware configuration and node lifecycle management.
 * *Status:* In Progress
 * *Focus:* Node composition and real-time DDS configuration.
