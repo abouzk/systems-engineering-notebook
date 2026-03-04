@@ -7,7 +7,7 @@ This repository serves as a living documentation of my technical development, ex
 
 ## Active Learning Logs
 
-### 📂 [Haptic Teleoperation & Simulation](logs/isaacsim-surgical-teleop-log.md)
+### 📂 [Haptic Teleoperation & Digital Twins](logs/isaacsim-surgical-teleop-log.md)
 *High-fidelity physics simulation for Sim-to-Real transfer.*
 * **Status:** In Progress
 * **Focus:** Node communication, bilateral control loops, and multi-modal hardware mapping.
@@ -17,17 +17,17 @@ This repository serves as a living documentation of my technical development, ex
 * **Status:** In Progress
 * **Focus:** Sensorimotor control loops, HCI ergonomics, and Pygame event handling.
 
-### 📂 [Computer Vision Kinematics](logs/mediapipe-hand-kinematics-log.md)
+### 📂 [Computer Vision Kinematics Pipeline](logs/mediapipe-hand-kinematics-log.md)
 *Markerless telemetry using applied machine learning.*
 * **Status:** In Progress
 * **Focus:** Google MediaPipe integration and spatial coordinate extraction.
 
-### 📂 [Robot Operating System (ROS 2)](logs/ros2-fundamentals-log.md)
+### 📂 [ROS 2 Architecture & Middleware](logs/ros2-fundamentals-log.md)
 *Middleware configuration and node lifecycle management.*
 * **Status:** In Progress
 * **Focus:** Node composition and real-time DDS configuration.
 
-### 📂 [Industrial Robotics (ABB)](logs/industrial-robot-control-python-log.md)
+### 📂 [Industrial Automation & Safety Architecture (ABB)](logs/industrial-robot-control-python-log.md)
 *Documentation of standard industrial platforms and safety standards.*
 * **Status:** Complete
 * **Summary:** Analysis of RWS communication, latching hardware states, and Python-to-RAPID bridge architecture.
