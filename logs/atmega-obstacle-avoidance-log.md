@@ -13,4 +13,4 @@
 * **Blockers/Constraints:** Initial legacy code mixed high-level pathing with low-level hardware safety checks, causing the robot to continuously attempt to re-drive into obstacles after a static 2-second delay. This required decoupling the obstacle check into an independent boolean return.
 * **Next Action Items:**
   * Push the final refactored `main_controller.ino` using conventional commits.
-  * Transition focus back to active software architectures (HMI Simulator or MediaPipe pipeline).
+  * Continue updating older projects to fit new professional workflow system.
