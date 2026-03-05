@@ -14,4 +14,5 @@
   1. Ingest `.mp4` video of a pianist playing a C-major scale.
   2. Overlay the 21-point MediaPipe wireframe.
   3. Extract frame-by-frame `(x,y)` coordinates and export to a `.csv` / spreadsheet format for mathematical analysis.
-* **Next Action Items:** * Write the baseline Python script to ingest an `.mp4` file and successfully initialize the MediaPipe `Hands` solution over the video frames.
+* **Next Action Items:**
+  * * Write the baseline Python script to ingest an `.mp4` file and successfully initialize the MediaPipe `Hands` solution over the video frames.
