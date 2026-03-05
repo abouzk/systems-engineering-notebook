@@ -15,4 +15,4 @@
   2. Overlay the 21-point MediaPipe wireframe.
   3. Extract frame-by-frame `(x,y)` coordinates and export to a `.csv` / spreadsheet format for mathematical analysis.
 * **Next Action Items:**
-  * * Write the baseline Python script to ingest an `.mp4` file and successfully initialize the MediaPipe `Hands` solution over the video frames.
+  * Write the baseline Python script to ingest an `.mp4` file and successfully initialize the MediaPipe `Hands` solution over the video frames.
