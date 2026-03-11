@@ -1,4 +1,4 @@
-# MediaPipe Hand Kinematics & Tracking Log
+# Biomechanical Kinematics - Engineering Log
 **Production Code:** [mediapipe-hand-kinematics](https://github.com/abouzk/mediapipe-hand-kinematics)
 
 ### 2026-03-10: Phase 1 MVP Implementation & Hardware-to-AI Pipeline Validation
