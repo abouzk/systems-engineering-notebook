@@ -60,7 +60,7 @@
   + Pin assignment finalized: GPIO 26 (STEP/PUL-), GPIO 25 (DIR-), GPIO 32 (Limit Switch)
     - *Reasoning:* Pins selected to avoid GPIO 34-39 (input-only on ESP32 DevKit) and GPIO 0/2/15 (boot-strapping pins that affect flash programming if pulled low at boot).
 * **Blockers / Constraints:**
-  + Hardware Safety Finding -- Limit Switch Bracket (Safety-Critical): Physical inspection identified a damaged plastic bracket on the home limit switch mount showing stress fracturing. If the bracket detaches during operation: (1) homing cannot establish zero position, causing uncontrolled travel; (2) the software homing timeout becomes the only remaining safety layer. Risk classification: High. Required action: bracket must be replaced or reinforced before any live weld testing. Critical deployment requirement -- documented in firmware file header.
+  + Hardware Safety Finding -- Stress fracturing identified at the inner corner junctions of the U-bracket where the bracket legs meet the top mounting bar. This geometry concentrates bending stress at exactly the points where the bracket is most loaded during carriage impact at home position. Two small screws retain the bracket to the actuator end plate -- if the plastic cracks at these mounting holes, the entire limit switch assembly detaches. Photos documented [here](https://github.com/abouzk/esp32-weld-motion-controller/tree/main/docs/audit).
 * **Next Action Items:**
   + Implement firmware with homing timeout as bracket-failure detection mechanism.
   + Coordinate limit switch bracket repair with machine shop before shop deployment.
