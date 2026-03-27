@@ -57,7 +57,7 @@
 * **Architecture Decisions:**
   + 1/8 microstepping (1600 PPR) selected over full-step (200 steps/rev)
     - *Reasoning:* At full-step resolution, minimum pulse frequency = (21.2 RPM x 200) / 60 = 70.7 Hz. This falls within the NEMA 23 primary mechanical resonance band -- observed effects include step loss, audible vibration, and unpredictable instantaneous speed, directly violating the <5% velocity variance requirement. At 1/8 microstep, minimum frequency = (21.2 x 1600) / 60 = 565.3 Hz, well above the resonance band. Upper bound: 752 Hz at 8 IPM -- within DM542T reliable pulse range.
-  + Pin assignment finalized: GPIO 26 (STEP/PUL-), GPIO 25 (DIR-), GPIO 32 (Limit Switch)
+  + Pin assignment corrected: GPIO 25 (STEP/PUL-), GPIO 26 (DIR-), GPIO 27 (ENA-), GPIO 32 (Limit Switch -- TBD, two switches available). Initial R2 had STEP/DIR swapped -- caught this before first hardware test.
     - *Reasoning:* Pins selected to avoid GPIO 34-39 (input-only on ESP32 DevKit) and GPIO 0/2/15 (boot-strapping pins that affect flash programming if pulled low at boot).
 * **Blockers / Constraints:**
   + Hardware Safety Finding (ISO 14971 Hazard Analysis) -- Stress fracturing identified at the inner corner junctions of the U-bracket where the bracket legs meet the top mounting bar. This geometry concentrates bending stress at exactly the points where the bracket is most loaded during carriage impact at home position. Two small screws retain the bracket to the actuator end plate -- if the plastic cracks at these mounting holes, the entire limit switch assembly detaches. Photos documented [here](https://github.com/abouzk/esp32-weld-motion-controller/tree/main/docs/audit).
