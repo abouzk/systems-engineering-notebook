@@ -1,6 +1,8 @@
 # Biomechanical Kinematics - Engineering Log
 **Production Code:** [mediapipe-hand-kinematics](https://github.com/abouzk/mediapipe-hand-kinematics)
 
+---
+
 ### 2026-03-10: Phase 1 MVP Implementation & Hardware-to-AI Pipeline Validation
 * **Objective:** Establish a live hardware ingestion bridge and validate the MediaPipe AI inference model for real-time biomechanical tracking, specifically isolating the wrist and index finger coordinates without the use of physical wearable sensors.
 * **Architecture Decisions:**
