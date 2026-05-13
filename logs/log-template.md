@@ -4,7 +4,7 @@
 ---
 
 ### [YYYY-MM-DD]: [Short Title of Goal/Meeting]
-* **Objective:** [What are you trying to achieve today?]
+* **Objective:** [What am I trying to/did achieve today?]
 * **Architecture Decisions:**
   * [Decision 1]
     * [Reasoning 1]
